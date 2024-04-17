@@ -1,0 +1,35 @@
+.subtitulo {
+    color: cyan;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.repositorios {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descricao {
+    max-width: 450px;
+}
+
+.simbolos {
+    display: flex;
+    margin-bottom: 320px;
+}
+
+#mae, #estudio-verdi, #repositorios {
+    scroll-margin-top: 136px;
+}
+
+footer {
+    margin-top: 35px;
+}
+
+.topicos {
+    margin-bottom: 320px;
+}
+
+.topicos-port {
+    margin-bottom: 35px;
+}

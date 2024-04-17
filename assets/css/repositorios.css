@@ -1,0 +1,43 @@
+.repositorios2 {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.titulos-repositorios {
+    font-weight: bold;
+    font-size: 25px;
+    transition: 1.5s;
+}
+
+a.a-repositorios:hover {
+    text-decoration: none;
+    color: cyan;
+}
+
+.simbolos {
+    font-size: 25px;
+    margin-top: auto;
+}
+
+.lorem, .mae, .portfolio, .estudio-verdi {
+    border: 1px solid white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.estudio-verdi:hover, .mae:hover, .portfolio:hover, .lorem:hover {
+    background-color: gray;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 980px) {
+    .repositorios2 {
+        grid-template-columns: 1fr;
+    }
+}

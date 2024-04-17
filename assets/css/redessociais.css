@@ -1,0 +1,32 @@
+a.redesSocias {
+    margin-right: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+a.github:hover {
+    color: #84e;
+    text-decoration: none;
+}
+
+a.gmail:hover {
+    color: #e54;
+    text-decoration: none;
+}
+
+a.instagram:hover {
+    background: -webkit-linear-gradient(#a600cf, rgb(255, 0, 0), #d3d009);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+a.whatsapp:hover {
+    color: greenyellow;
+    text-decoration: none;
+}
+
+a.linkedin:hover {
+    color: #0a66c2;
+    text-decoration: none;
+}

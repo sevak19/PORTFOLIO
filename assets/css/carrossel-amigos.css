@@ -1,0 +1,17 @@
+.card-text {
+    color: black;
+}
+
+.splide__slide img {
+    height: 300px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.splide {
+    margin: 15 auto;
+}
+
+.splide__track {
+    padding: 15px;
+}
