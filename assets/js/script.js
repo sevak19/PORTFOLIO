@@ -17,6 +17,19 @@ window.addEventListener("load", async () => {
     nome.innerText = data.name
     usuario.innerText = data.login
     seguidores.innerText = data.followers
+
+    if(window.location.hash) {
+        const headerOffset = document.getElementById('header').offsetHeight;
+        const targetElement = document.getElementById(window.location.hash.substring(1));
+        
+        if (targetElement) {
+            const targetOffset = targetElement.offsetTop - headerOffset;
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        }
+    }
 })
 var swap1 = 'ph-envelope-simple';
 var swap2 = 'ph-envelope-simple-open';
