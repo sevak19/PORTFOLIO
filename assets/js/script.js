@@ -4,9 +4,6 @@ const usuario = document.querySelector(".usuario")
 const seguidores = document.querySelector(".seguidores")
 const emailIcon = document.querySelector("#email");
 
-
-console.log(usuario);
-
 window.addEventListener("load", async () => {
     const res = await fetch("https://api.github.com/users/sevak19")
     const data = await res.json()

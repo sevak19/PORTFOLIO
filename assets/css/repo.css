@@ -15,11 +15,7 @@
 
 .simbolos {
     display: flex;
-    margin-bottom: 320px;
-}
-
-#mae, #estudio-verdi, #repositorios {
-    scroll-margin-top: 136px;
+    margin-top: 320px;
 }
 
 footer {
@@ -32,4 +28,8 @@ footer {
 
 .topicos-port {
     margin-bottom: 35px;
+}
+
+.dropdown-menu {
+    width: 210px;
 }

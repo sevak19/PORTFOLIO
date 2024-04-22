@@ -12,3 +12,21 @@ window.addEventListener("load", () => {
         }
     }
 })
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const headerOffset = document.getElementById('header').offsetHeight;
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const targetOffset = targetElement.offsetTop - headerOffset;
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'instant'
+            });
+        }
+    });
+});

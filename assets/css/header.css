@@ -18,14 +18,16 @@ header{
     background-color: rgb(53, 46, 46);
 }
 
-header .logo {
-    margin-left: 70px;
+header .logo-caixa {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-caixa a {
+    text-decoration: none;
 }
 
 header .setas {
-    position: absolute;
-    margin-top: 1.5%;
-    filter: grayscale(100%);
     transition: 1.5s;
 }
 
@@ -35,9 +37,9 @@ header .setas:hover {
 }
 
 @keyframes color {
-    0% {filter: grayscale(100%);}
-    50% {filter: grayscale(0);}
-    100% {filter: grayscale(100%);}
+    0% {filter: grayscale(0);}
+    50% {filter: grayscale(100%);}
+    100% {filter: grayscale(0);}
 }
 
 header .secoes {
