@@ -32,7 +32,7 @@ window.addEventListener("load", async () => {
         }
     }
 
-    const reposRes = await fetch(data.repos_url);
+    const reposRes = await fetch(data.repos_url); // repos_url contém a URL dos repositórios do usuário
     const reposData = await reposRes.json();
 
     const reposContainer = document.getElementById('repos');
