@@ -1,32 +1,33 @@
-window.addEventListener("load", () => {
-    if(window.location.hash) {
-        const headerOffset = document.getElementById('header').offsetHeight;
-        const targetElement = document.getElementById(window.location.hash.substring(1));
-        
-        if (targetElement) {
-            const targetOffset = targetElement.offsetTop - headerOffset;
-            window.scrollTo({
-                top: targetOffset,
-                behavior: 'instant'
-            });
-        }
-    }
-})
+document.addEventListener('DOMContentLoaded', carregarInformacoesRepositorio);
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const headerOffset = document.getElementById('header').offsetHeight;
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        
-        if (targetElement) {
-            const targetOffset = targetElement.offsetTop - headerOffset;
-            window.scrollTo({
-                top: targetOffset,
-                behavior: 'instant'
-            });
-        }
-    });
-});
+
+function obterParametroURL(nome) {
+    const parametros = new URLSearchParams(window.location.search);
+    return parametros.get(nome);
+}
+
+function carregarInformacoesRepositorio() {
+
+    const nomeRepositorio = obterParametroURL('name');
+
+    
+    if (!nomeRepositorio) return;
+
+    
+    const url = `https://api.github.com/repos/sevak19/${nomeRepositorio}`;
+
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.bio);
+            document.getElementById('titulo').innerHTML = `
+            Repositório: ${data.name}
+            `
+            document.getElementById('descricao').textContent = data.description;
+            document.getElementById('dataCriacao').textContent = data.created_at;
+            document.getElementById('linguagem').textContent = data.language;
+            document.getElementById('linkAcesso').innerHTML = `<a href="${data.html_url}" target="_blank">${data.html_url}</a>`;
+        })
+        .catch(error => console.error('Erro ao carregar informações do repositório:', error));
+}

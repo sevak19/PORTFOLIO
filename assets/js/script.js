@@ -32,7 +32,7 @@ window.addEventListener("load", async () => {
         }
     }
 
-    const reposRes = await fetch(data.repos_url); // repos_url contém a URL dos repositórios do usuário
+    const reposRes = await fetch(data.repos_url);
     const reposData = await reposRes.json();
 
     const reposContainer = document.getElementById('repos');
@@ -40,7 +40,7 @@ window.addEventListener("load", async () => {
 
     reposData.forEach(repo => {
         reposContainer.innerHTML += `
-            <a class="a-repositorios" href="${repo.html_url}">
+            <a class="a-repositorios" href="repo.html?name=${repo.name}">
                 <div class="repositorio">
                     <p class="titulos-repositorios">${repo.name}</p>
                     <p>${repo.description}</p>
