@@ -6,19 +6,28 @@
 @import url('carrossel.css');
 @import url('footer.css');
 
-*{
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #2c2c2c;
+    --accent-color: #00ffff;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --border-color: #3a3a3a;
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Rajdhani", sans-serif;
     font-weight: 300;
     font-style: normal;
-    line-height: normal;
+    line-height: 1.6;
 }
 
-body{
-    background-color: rgb(53, 46, 46);
-    color: white;
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
 
 h2 {
@@ -32,9 +41,8 @@ a {
 }
 
 a:hover {
-    color: gray;
-    text-decoration: underline;
-    cursor: pointer;
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 p {

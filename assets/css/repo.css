@@ -1,35 +1,64 @@
+body {
+    height: 100% !important;
+}
+
 .subtitulo {
-    color: cyan;
-    padding: 15px;
-    font-size: 25px;
+    color: var(--accent-color);
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .repositorios {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .descricao {
-    max-width: 450px;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .simbolos {
     display: flex;
-    margin-top: 320px;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.2rem;
+    color: var(--text-muted);
 }
 
-footer {
-    margin-top: 35px;
-}
-
-.topicos {
-    margin-bottom: 50px;
-}
-
-.topicos-port {
-    margin-bottom: 35px;
+.topicos, .topicos-port {
+    margin-bottom: 2rem;
 }
 
 .dropdown-menu {
-    width: 210px;
+    background-color: var(--primary-bg);
+    border: 1px solid var(--border-color);
 }
+
+.dropdown-item {
+    color: var(--text-color);
+}
+
+.dropdown-item:hover {
+    background-color: var(--secondary-bg);
+    color: var(--accent-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .repositorios {
+        flex-direction: column;
+    }
+    
+    .simbolos {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
+}
+

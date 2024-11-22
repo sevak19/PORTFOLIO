@@ -11,6 +11,16 @@
     transition: 1.5s;
 }
 
+.a-repositorios {
+    padding: 10px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+}
+
+.a-repositorios:hover {
+    background-color: var(--border-color);
+}
+
 a.a-repositorios:hover {
     text-decoration: none;
     color: cyan;

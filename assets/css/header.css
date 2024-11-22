@@ -1,5 +1,5 @@
-header{
-    background-color: black;
+#header {
+    background-color: var(--secondary-bg);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +8,10 @@ header{
     position: sticky;
     z-index: 100;
     top: 0;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .nav-mobile {
     display: none;
@@ -16,6 +19,7 @@ header{
 
 .dropdown-menu {
     background-color: rgb(53, 46, 46);
+    padding: 10px;
 }
 
 header .logo-caixa {
@@ -42,19 +46,23 @@ header .setas:hover {
     100% {filter: grayscale(0);}
 }
 
-header .secoes {
-    margin-right: 40px;
-    background-color: rgb(53, 46, 46);
-    padding: 5px;
-    color: white;
-    border-radius: 15%;
-    text-decoration: none;
-    font-size: 25px;
+.secoes {
+    margin-right: 20px;
+    background-color: var(--primary-bg);
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header .secoes:hover {
-    color: gray;
-    text-decoration: none;
+.secoes:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+.nav-mobile {
+    display: none;
 }
 
 @media screen and (max-width: 980px) {
